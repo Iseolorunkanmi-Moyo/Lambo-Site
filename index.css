@@ -38,15 +38,6 @@
         width: 100%;
     }
 
-    footer {
-        height: 40px;
-        width: 100%;
-        background-color: var(--maincolor3);
-        position: fixed;
-        bottom: 0px;
-        left: 0px;
-    }
-
     .logoDiv {
         margin-left: 5px;
         height: 40px;
@@ -80,14 +71,14 @@
         display: none;
         position: absolute;
         top: 0px;
-        left: 0px;
-        background-color: var(--maincolor1);
-        height: 50px;
+        right: 0px;
+        background-color: var(--maincolor3);
+        height: 48px;
         width: 100%;
         border-bottom: solid 1px ;
-        display: flex;
         justify-content: space-between;
-        align-items: center;
+        animation: navSlide 0.5s;
+        align-items: center; 
     }
 
     .searchSubDiv{
@@ -99,6 +90,18 @@
         justify-content: center;
         align-items: center;
         background-color: var(--faintblack1);
+        
+    }
+
+    @keyframes navSlide {
+        0%{
+            width: 40px;
+        }
+
+        100%{
+            width: 100% ;
+        }
+        
     }
 
     .returnNav{
@@ -149,8 +152,94 @@
     }
 
     .clearInputBtn{
-        height: 20px;
+        height: 18px;
     }
 
+.menu{
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% - 110px);
+    display: none;
+}
+    .menu>div{
+        background-color: var(--maincolor4);
+        width: 50%;
+        max-width: 200px;
+        padding: 4px;
+    animation: menuSlide 1s;
+    height: 100%;
+}
+
+@keyframes menuSlide {
+
+    0%{
+        margin-left: -50%;
+    }
+    
+    100%{
+        margin-left: 0%;
+    }
+}
+
+
+@keyframes reverseMenuSlide {
+
+    0%{
+        
+        left: 0px;
+    }
+    
+    100%{
+        
+        left: -50%;
+    }
+}
+
+
+    
+    footer {
+        height: 50px;
+        width: 100%;
+        background-color: var(--maincolor3);
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 3px;
+    }
+
+    .footerIcon{
+        font-weight: 500;
+        color: white;
+        height: 40px;
+        width: 40px;
+        background: transparent;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .profileIcon{
+        padding-top: 3px;
+        padding-bottom: 5px;
+        height: 23px;
+    }
+
+    .footerImg{
+         height: 30px;
+        width: 30px;
+    }
+
+    .footerIcon>img{
+        /* height: 30px;
+        width: 30px; */
+    }
 
 }
