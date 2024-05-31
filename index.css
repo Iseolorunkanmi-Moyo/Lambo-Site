@@ -42,6 +42,9 @@
         height: 40px;
         width: 100%;
         background-color: var(--maincolor3);
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
     }
 
     .logoDiv {
