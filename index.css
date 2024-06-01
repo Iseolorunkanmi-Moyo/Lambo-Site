@@ -4,16 +4,18 @@
     --maincolor3: #1D2A34;
     --maincolor4: #253541;
     --maincolor5: #2D3F4E;
-    --faintblack1: rgba(0, 0, 0, 0.1); 
-    --faintblack2: rgba(0, 0, 0, 0.2); 
-    --faintblack3: rgba(0, 0, 0, 0.3); 
-    --faintblack4: rgba(0, 0, 0, 0.4); 
-    --faintblack5: rgba(0, 0, 0, 0.5); 
-    --faintwhite1:rgba(255, 255, 255, 0.1);
-    --faintwhite2:rgba(255, 255, 255, 0.2);
-    --faintwhite3:rgba(255, 255, 255, 0.3);
-    --faintwhite4:rgba(255, 255, 255, 0.4);
-    --faintwhite5:rgba(255, 255, 255, 0.5);
+    --faintblack1: rgba(0, 0, 0, 0.1);
+    --faintblack2: rgba(0, 0, 0, 0.2);
+    --faintblack3: rgba(0, 0, 0, 0.3);
+    --faintblack4: rgba(0, 0, 0, 0.4);
+    --faintblack5: rgba(0, 0, 0, 0.5);
+    --faintwhite1: rgba(255, 255, 255, 0.1);
+    --faintwhite2: rgba(255, 255, 255, 0.2);
+    --faintwhite3: rgba(255, 255, 255, 0.3);
+    --faintwhite4: rgba(255, 255, 255, 0.4);
+    --faintwhite5: rgba(255, 255, 255, 0.5);
+    --faintwhite8: rgba(255, 255, 255, 0.8);
+
     font-family: roboto;
 }
 
@@ -67,7 +69,7 @@
         width: 100%;
     }
 
-    .searchDiv{
+    .searchDiv {
         display: none;
         position: absolute;
         top: 0px;
@@ -75,13 +77,13 @@
         background-color: var(--maincolor3);
         height: 48px;
         width: 100%;
-        border-bottom: solid 1px ;
+        border-bottom: solid 1px;
         justify-content: space-between;
         animation: navSlide 0.5s;
-        align-items: center; 
+        align-items: center;
     }
 
-    .searchSubDiv{
+    .searchSubDiv {
         display: flex;
         width: calc(100% - 45px);
         border-radius: 20px;
@@ -90,21 +92,21 @@
         justify-content: center;
         align-items: center;
         background-color: var(--faintblack1);
-        
+
     }
 
     @keyframes navSlide {
-        0%{
+        0% {
             width: 40px;
         }
 
-        100%{
-            width: 100% ;
+        100% {
+            width: 100%;
         }
-        
+
     }
 
-    .returnNav{
+    .returnNav {
         height: 35px;
         width: 35px;
         display: flex;
@@ -116,22 +118,22 @@
         border: none;
     }
 
-    .returnNav:active{
-        background: var(--faintwhite1) ;
+    .returnNav:active {
+        background: var(--faintwhite1);
     }
 
-    .returnNav>img{
+    .returnNav>img {
         height: 30px;
         width: 30px;
     }
 
-    .searchInput{
+    .searchInput {
         height: 35px;
         width: calc(100% - 30px);
         border-right: solid 1px var(--faintwhite1);
         border-top: none;
         border-bottom: none;
-        border-left:none;
+        border-left: none;
         padding: 0px;
         border-radius: 20px 0px 0px 20px;
         padding-left: 10px;
@@ -142,63 +144,156 @@
         font-size: 14px;
     }
 
-    .clearInput{
+    .clearInput {
         height: 35px;
         width: 35px;
         border-top-right-radius: 20px;
-        border-bottom-right-radius:20px ;
+        border-bottom-right-radius: 20px;
         border: none;
         background-color: var(--faintwhite1);
     }
 
-    .clearInputBtn{
+    .clearInputBtn {
         height: 18px;
     }
 
-.menu{
-    position: fixed;
-    top: 50px;
-    left: 0px;
-    width: 100%;
-    height: calc(100% - 110px);
-    display: none;
-}
-    .menu>div{
+    .menu {
+        position: fixed;
+        top: 50px;
+        left: 0px;
+        width: 100%;
+        height: calc(100% - 110px);
+        display: flex;
+        /* animation: menuSlide 1s; */
+
+    }
+
+    .menu>div {
+       
+    }
+
+    @keyframes menuSlide {
+
+        0% {
+            margin-left: -50%;
+        }
+
+        100% {
+            margin-left: 0%;
+        }
+    }
+
+
+    @keyframes reverseMenuSlide {
+
+        0% {
+
+            left: 0px;
+        }
+
+        100% {
+
+            left: -50%;
+        }
+    }
+
+    .menuSubDiv{
+        color: white;
+        padding: 10px;
         background-color: var(--maincolor4);
         width: 50%;
         max-width: 200px;
         padding: 4px;
-    animation: menuSlide 1s;
-    height: 100%;
-}
-
-@keyframes menuSlide {
-
-    0%{
-        margin-left: -50%;
+        height: 100%;
+        z-index: 400;
+        overflow-y: scroll;
     }
-    
-    100%{
-        margin-left: 0%;
+
+    .closeMenuSpace{
+        width: 50%;
+        height: 100%;
+        background: transparent;
+        padding: 4px;
+
     }
-}
 
+    .menuSubDiv>a{
+        color: white;
+        text-decoration: none;
+    }
 
-@keyframes reverseMenuSlide {
+    .menuLinksDiv{
+        /* margin-bottom: -20px; */
+    }
 
-    0%{
+    .menuLinksDiv>a{
+        color: white;
+        text-decoration: none;
+        /* text-align: center; */
         
-        left: 0px;
     }
+
+    .menuLinksDiv>a>div{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        font-weight: 500;
+        border-bottom: solid  1px var(--faintwhite2);
+    }
+
+    .menuTools{
+        /* height: 40px; */
+        overflow: hidden;
+    }
+
+    .menuTools:active{
+        height: fit-content;
+    }
+
     
-    100%{
+    .toolslinks{
+        margin-left: -10px;
+    }
+
+    .toolslinks>ul{
+        margin-top: 0px;
+        padding-top: 2px;
+    }
+
+    .toolslinks>ul>a{
+        color: var(--faintwhite8);
+        text-decoration: none;
+    }
+
+    .toolsHead{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        font-weight: 500;
+        font-size: 16px;
+        border-bottom: solid  1px var(--faintwhite2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menuDropdown{
+        height:20px;
+        width: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        border: none;
+    }
+
+    .menuDropdownImg{
+        height: 19px;
+        rotate: 270deg;
         
-        left: -50%;
     }
-}
 
 
-    
     footer {
         height: 50px;
         width: 100%;
@@ -212,7 +307,7 @@
         padding-top: 3px;
     }
 
-    .footerIcon{
+    .footerIcon {
         font-weight: 500;
         color: white;
         height: 40px;
@@ -226,18 +321,18 @@
         gap: 2px;
     }
 
-    .profileIcon{
+    .profileIcon {
         padding-top: 3px;
         padding-bottom: 5px;
         height: 23px;
     }
 
-    .footerImg{
-         height: 30px;
+    .footerImg {
+        height: 30px;
         width: 30px;
     }
 
-    .footerIcon>img{
+    .footerIcon>img {
         /* height: 30px;
         width: 30px; */
     }
