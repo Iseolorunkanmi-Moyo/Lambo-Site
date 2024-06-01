@@ -42,12 +42,60 @@
 
     .displaySection{
         height: 100%;
-        width: 100%;
+        width: calc(100% -6px);
+        padding: 3px;
     }
 
     #homeSection{
-
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% -10px);
+        padding: 5px;
     }
+
+    .section1{
+        display: flex;
+        width: 100%;
+        /* align-items: center; */
+        /* justify-content: center; */
+        flex-direction: column;
+    }
+
+    .section1Img1{
+        width: 50%;
+        border-radius: 10px;
+    }
+
+    .section1heading1{
+        width: calc(100% );
+        /* padding-left: 5px; */
+        border-bottom: solid 1px var(--faintblack2);
+        font-size: 17px;
+        border-top: solid 1px var(--faintblack2);
+        margin-top: 10px;
+        font-weight: 500;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     #updateSection{
         display: none;
@@ -224,7 +272,7 @@
         color: white;
         padding: 10px;
         background-color: var(--maincolor4);
-        width: 50%;
+        width: 65%;
         max-width: 200px;
         padding: 4px;
         height: 100%;
@@ -233,7 +281,7 @@
     }
 
     .closeMenuSpace{
-        width: 50%;
+        width: 35%;
         height: 100%;
         background: transparent;
         padding: 4px;
