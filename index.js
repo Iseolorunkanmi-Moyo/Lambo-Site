@@ -7,6 +7,53 @@ var returnNav = document.getElementById("returnNav")
 var searchInput = document.getElementById("searchInput")
 var searchBtn = document.getElementById("searchBtn")
 var searchDiv = document.getElementById("searchDiv")
+var homeBtn = document.getElementById("homeBtn")
+var updateBtn = document.getElementById("updateBtn")
+var postBtn = document.getElementById("postBtn")
+var profileBtn = document.getElementById("profileBtn")
+var homeSection = document.getElementById("homeSection")
+var updateSection = document.getElementById("updateSection")
+var postSection = document.getElementById("postSection")
+var profileSection = document.getElementById("profileSection")
+
+homeBtn.addEventListener("click", showHomeSection)
+updateBtn.addEventListener("click", showUpdateSection)
+postBtn.addEventListener("click", showPostSection)
+profileBtn.addEventListener("click", showProfileSection)
+
+function test(){
+alert("hi")
+}
+
+function showHomeSection(){
+    homeSection.style.display = "flex"
+    updateSection.style.display ="none"
+    postSection.style.display = "none"
+    profileSection.style.display = "none"
+}
+
+function showUpdateSection(){
+    homeSection.style.display = "none"
+    updateSection.style.display ="flex"
+    postSection.style.display = "none"
+    profileSection.style.display = "none"
+}
+
+function showPostSection(){
+    homeSection.style.display = "none"
+    updateSection.style.display ="none"
+    postSection.style.display = "flex"
+    profileSection.style.display = "none"
+}
+
+function showProfileSection(){
+    homeSection.style.display = "none"
+    updateSection.style.display ="none"
+    postSection.style.display = "none"
+    profileSection.style.display = "flex"
+}
+ 
+
 
 searchTrigger.addEventListener("click", () => {
    openSearchDiv()
