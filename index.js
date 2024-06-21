@@ -62,8 +62,6 @@ menuSpace.addEventListener("click", () => {
 })
 
 function openMenu() {
-    menuDiv.style.animationName = "menuSlide"
-    menuDiv.style.animationDuration = "1s"
     menuDiv.style.display = "flex"
     menuImg.setAttribute("src", "./images/close x.svg")
     menucount = 1
@@ -71,14 +69,9 @@ function openMenu() {
 
 
 function closeMenu() {
-    menuDiv.style.animationName = "reverseMenuSlide"
-    menuDiv.style.animationDuration = "1s"
-    setTimeout(() => {
-        menuDiv.style.display = "none"
+            menuDiv.style.display = "none"
         menuImg.setAttribute("src", "./images/menu icon.svg")
         menucount = 0
-
-    }, 950);
 }
 
 menuDropDown.addEventListener("click", menuDropDownFunc)

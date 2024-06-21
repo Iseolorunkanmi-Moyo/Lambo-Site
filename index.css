@@ -34,6 +34,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 34444;
+        position: absolute;
+        top: 0px;
+        background-color: white;
     }
 
     main {
@@ -261,16 +265,16 @@
 
     .menuSubDiv{
         /* color: white; */
-        padding: 10px;
+        padding: 10px 4px 4px 4px ;
         background-color: white;
-        box-shadow: 4px 0px 10px 0px var(--faintblack1);
-        /* background-color: var(--maincolor4); */
+        box-shadow: 4px 0px 2px 0px var(--faintblack1);
         width: 65%;
         max-width: 200px;
-        padding: 4px;
+        /* padding: 4px; */
         height: 100vh;
         z-index: 400;
         overflow-y: scroll;
+        margin-top: -4px;
     }
 
     .closeMenuSpace{
@@ -371,6 +375,11 @@
 
     .toolslinks>ul>a:active{
         background-color: var(--maincolor5);
+    }
+
+    main{
+        padding-top: 40px;
+        height: calc(100% - 40px);
     }
 
     footer {
