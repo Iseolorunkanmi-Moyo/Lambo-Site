@@ -267,9 +267,9 @@
         /* color: white; */
         padding: 10px 4px 4px 4px ;
         background-color: white;
-        box-shadow: 4px 0px 2px 0px var(--faintblack1);
-        width: 65%;
-        max-width: 200px;
+        /* box-shadow: 4px 0px 2px 0px var(--faintblack1); */
+        width: 100%;
+        /* max-width: 200px; */
         /* padding: 4px; */
         height: 100vh;
         z-index: 400;
@@ -278,7 +278,7 @@
     }
 
     .closeMenuSpace{
-        width: 50%;
+        /* width: 50%; */
         height: 100%;
         background: transparent;
         padding: 4px;
