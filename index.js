@@ -7,52 +7,15 @@ var returnNav = document.getElementById("returnNav")
 var searchInput = document.getElementById("searchInput")
 var searchBtn = document.getElementById("searchBtn")
 var searchDiv = document.getElementById("searchDiv")
-var homeBtn = document.getElementById("homeBtn")
-var updateBtn = document.getElementById("updateBtn")
-var postBtn = document.getElementById("postBtn")
-var profileBtn = document.getElementById("profileBtn")
-var homeSection = document.getElementById("homeSection")
-var updateSection = document.getElementById("updateSection")
-var postSection = document.getElementById("postSection")
-var profileSection = document.getElementById("profileSection")
+var menuDropDown = document.getElementById("menuDropdown")
+var menuTools = document.getElementById("menuTools")
 
-homeBtn.addEventListener("click", showHomeSection)
-updateBtn.addEventListener("click", showUpdateSection)
-postBtn.addEventListener("click", showPostSection)
-profileBtn.addEventListener("click", showProfileSection)
+
 
 function test(){
 alert("hi")
 }
 
-function showHomeSection(){
-    homeSection.style.display = "flex"
-    updateSection.style.display ="none"
-    postSection.style.display = "none"
-    profileSection.style.display = "none"
-}
-
-function showUpdateSection(){
-    homeSection.style.display = "none"
-    updateSection.style.display ="flex"
-    postSection.style.display = "none"
-    profileSection.style.display = "none"
-}
-
-function showPostSection(){
-    homeSection.style.display = "none"
-    updateSection.style.display ="none"
-    postSection.style.display = "flex"
-    profileSection.style.display = "none"
-}
-
-function showProfileSection(){
-    homeSection.style.display = "none"
-    updateSection.style.display ="none"
-    postSection.style.display = "none"
-    profileSection.style.display = "flex"
-}
- 
 
 
 searchTrigger.addEventListener("click", () => {
@@ -102,19 +65,47 @@ function openMenu() {
     menuDiv.style.animationName = "menuSlide"
     menuDiv.style.animationDuration = "1s"
     menuDiv.style.display = "flex"
-    menuImg.setAttribute("src", "./close x.svg")
+    menuImg.setAttribute("src", "./images/close x.svg")
     menucount = 1
 }
+
 
 function closeMenu() {
     menuDiv.style.animationName = "reverseMenuSlide"
     menuDiv.style.animationDuration = "1s"
     setTimeout(() => {
         menuDiv.style.display = "none"
-        menuImg.setAttribute("src", "./menu icon.svg")
+        menuImg.setAttribute("src", "./images/menu icon.svg")
         menucount = 0
 
     }, 950);
+}
+
+menuDropDown.addEventListener("click", menuDropDownFunc)
+
+var i = 0
+
+function menuDropDownFunc(){
+    // var i = 0
+    // alert("seen")
+
+    if(i == 0){
+        menuTools.style.height = "fit-content"
+        menuTools
+        i = 1
+    }
+
+    else if(i == 1){
+        menuTools.style.height = "35px"
+        i = 0
+    }
+}
+
+function openMenuDropdown(){
+}
+
+function closeMenuDropdown(){
+    toolslinks.style.height = "35px"
 }
 
 
